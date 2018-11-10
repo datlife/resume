@@ -1,6 +1,6 @@
 languageCode = "en-US"
 layoutdir = "layouts"
-publishdir = "public"
+publishdir = "docs"
 baseurl = "http://dat.works/"
 googleAnalytics = ""
 theme = "hugo-vitae"
