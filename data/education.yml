@@ -1,0 +1,10 @@
+name: Education
+source:
+  - title: University of California, Davis 
+    univ: Computer Science
+    place: Davis, CA
+    date: Class of 2019
+  - title: De Anza Community College
+    univ: Computer Science
+    place: Cupertino, CA
+    date: Class of 2017

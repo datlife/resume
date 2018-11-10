@@ -1,0 +1,14 @@
+name: Relavant Experiences
+source:
+  - prof: Software Engineer Intern - Freedge.org
+    place: Davis, CA
+    time: 2018 to Present
+    description: 	Building a food-sharing platform to reduce food waste
+  - prof: Machine Learning Research Intern - University of California, Berkeley
+    place: Berkeley, CA
+    time: May 2018 - August 2018
+    description: Conducted research on state-of the-art ML applications for wireless communication system. 
+  - prof: Robotics Scholar - Carnegie Mellon University
+    place: Pittsburgh, PA
+    time: May 2017 - August 2017
+    description: Developed a deep learning model, YOLOv2 for an Automated Traffic Sign Detection System, running in real-time. 

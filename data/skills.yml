@@ -1,0 +1,11 @@
+name: Technical Skills
+source:
+  - title: Languages
+    name: [Python, C/C++, Go, Javascript, TypeScript]
+    
+  - title: Machine Learning
+    name: [TensorFlow / Keras, PyTorch, OpenCV, ROS]
+
+  - title: Web Technologies 
+    name: [SQL, Redis, GraphQL, ReactJS,  HTML5/CSS3]
+
