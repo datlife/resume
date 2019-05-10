@@ -14,13 +14,17 @@ Reset default settings
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
 html {
     font-size: 62.5%; /* 1rem = 10px ==> font-default: 16px (100%) --> 62.25% = 10px*/
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    padding: 6rem;
+    padding: 2rem;
     line-height: 1.6;
 }
 
@@ -42,17 +46,11 @@ Header
 
 .header__personal-info {
     align-self: center;
-    display: flex;
-    flex-direction: row;
+    display: none;
 }
 
-.header__personal-info > * {
-    padding: 0 1rem;
-    border-right: 1px black solid;
-}
-
-.header__personal-info > *:last-child {
-    border-right: none;
+#profile {
+    display: none;
 }
 
 section {
@@ -68,37 +66,34 @@ section {
 
 
 .experience {
-    display: inline-flex;
-    flex-direction: row;
+    display: flex;
     flex-flow: row wrap;
     align-items: baseline;
 }
 
 .experience__job-title {
-    flex: 0 0 30vw;
+    order: 1;
     font-size: 1.7rem;
     font-weight: 600;
-    /* background-color: grey; */
-
+    min-width: 40vw;
 }
-
 .experience__company {
-    flex: 0 0 30vw;
+    flex: 0 0 100%;
+    order: 3;
     font-size: 1.5rem;
     font-weight: 100;
-    /* background-color: gainsboro; */
 
 }
 
 .experience__geo-date {
-    flex: 1;
+    order: 2;
+    margin-left: auto;
     font-weight: 400;
-    text-align: right;
-    /* background-color: antiquewhite; */
 
 }
 
 .experience__job-duties {
+    order: 4;
     margin-left: 2rem;
     line-height: 2.0;
 }
@@ -121,4 +116,174 @@ section {
     font-size: 1.3rem;
     font-weight: 600;
     margin-right: 1rem;
+}
+
+#skills {
+    font-size: 1.3rem;
+}
+
+#skills ul > li {
+    margin-left: 1.5rem;
+}
+
+#skills ul > li span {
+    font-weight: 500;
+    color: var(--dark-grey);
+}
+
+
+.project {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+}
+
+.project__title {
+    order: 1;
+    font-size: 1.7rem;
+    font-weight: 600;
+    min-width: 40vw;
+}
+.project__summary {
+    order: 3;
+    flex: 0 0 100%;
+    font-size: 1.3rem;
+    font-weight: 100;
+
+}
+
+.project__date {
+    order: 2;
+    margin-left: auto;
+    font-weight: 400;
+
+}
+
+.project__highlights {
+    order: 4;
+    margin-left: 2rem;
+    line-height: 2.0;
+}
+
+
+@media (min-width: 48rem)  {/* Tablet */
+
+    .header__personal-info {
+        align-self: center;
+        display: inherit;
+    }
+    
+    .header__personal-info > * {
+        padding: 0 1rem;
+        border-right: 1px black solid;
+    }
+    
+    .header__personal-info > *:last-child {
+        border-right: none;
+    }
+
+    #resume {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    #education {
+        flex: 0 0 50%;
+    }
+
+    #skills {
+        flex: 0 0 50%;
+    }
+    .experience__job-title {
+        order: 0;
+        flex: 0;
+        min-width: 30rem;
+    }
+    .experience__company{
+        order: 1;
+        flex: 1;
+        min-width: 25rem;
+
+    }
+    .experience__geo-date {
+        order: 2;
+    }
+    .experience__job-duties {
+        order: 3;
+    }
+    .project__title {
+        order: 0;
+        flex: 0;
+        min-width: 12rem;
+    }
+    .project__summary {
+        order: 1;
+        flex: 1;
+        min-width: 25rem;
+
+    }
+    .project__date{
+        order: 2;
+    }
+    .project__highlights {
+        order: 3;
+        flex: 0 0 100%;
+    }
+}
+
+@media (min-width:60rem) {
+    /* Portrait Tablet */
+
+    main {
+        padding: 0 4rem;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+
+    #profile {
+        display: inherit;
+        padding-right: 4rem;
+        padding-top: 3rem;
+        flex: 0 0 30%;
+        max-width: 30rem;
+    }
+
+    .profile__photo img {
+        border-radius: 50% /* make img circle */
+        
+    }
+    #resume {
+        max-width: 60rem;
+        /* background-color: #f1f1f1; */
+        padding: 3rem 4rem;
+        margin: 3rem 0;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+    }
+
+    .experience__job-title {
+        font-size: 1.5rem;
+        min-width: 20rem;
+    }
+    .experience__company{
+        min-width: 18rem;
+    }
+    .experience__job-duties {
+        flex: 0 0 100%;
+    }
+}
+
+@media (min-width:80rem) {
+    /* Desktop */
+    #profile {
+        max-width: 30rem;
+    }
+
+    .profile__photo img {
+        border-radius: 50% /* make img circle */
+        
+    }
+    #resume {
+        max-width: 70rem;
+    }
 }
