@@ -31,6 +31,14 @@ Reset default settings
     box-sizing: border-box;
 }
 
+a {
+    text-decoration-line: none;
+    color: inherit;
+}
+
+a:hover {
+    border-bottom: 2px solid black;
+}
 img {
     max-width: 100%;
     height: auto;
@@ -76,8 +84,8 @@ Header
     background-color: azure;
     opacity: 0;
 
-    animation: 2s fadeInFromBottom;
-    animation-delay: 2s;
+    animation: 1s fadeInFromBottom;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
 
 }
@@ -85,7 +93,7 @@ Header
     display: none;
     opacity: 0;
 
-    animation: 2s fadeInFromBottom;
+    animation: 1s fadeInFromBottom;
     animation-fill-mode: forwards;
 
 }
@@ -326,7 +334,7 @@ section {
 
     .profile_intro {
         padding-left: 0rem;
-        padding-right: 2rem;
+        padding-right: 3rem;
     }
 
     .experience__job-title {
