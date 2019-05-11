@@ -6,6 +6,20 @@
 }
 
 /*==============================================================================
+Animation
+==============================================================================*/
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(10vh);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*==============================================================================
 Reset default settings
 ==============================================================================*/
 *,
@@ -57,11 +71,23 @@ Header
     font-size: 1.4rem;
 }
 
+
 #resume {
     background-color: azure;
+    opacity: 0;
+
+    animation: 2s fadeInFromBottom;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
 }
 #profile {
     display: none;
+    opacity: 0;
+
+    animation: 2s fadeInFromBottom;
+    animation-fill-mode: forwards;
+
 }
 
 section {
