@@ -371,3 +371,15 @@ section {
         font-size:1.2rem;
     }
 }
+
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-background);
+    background-image: url(style.css);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
