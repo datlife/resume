@@ -1,4 +1,7 @@
 :root {
+    --color-background: #f7f7f7;
+    --color-primary: #333;
+    --color-primary-1: #143b6d;
     --dark-grey: rgb(80,80,80);
 }
 
@@ -26,6 +29,7 @@ body {
     font-family: 'Roboto', sans-serif;
     padding: 2rem;
     line-height: 1.6;
+    background-color: var(--color-background);
 }
 
 
@@ -53,6 +57,9 @@ Header
     font-size: 1.4rem;
 }
 
+#resume {
+    background-color: azure;
+}
 #profile {
     display: none;
 }
