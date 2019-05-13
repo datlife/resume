@@ -54,6 +54,18 @@ body {
     background-color: var(--color-background);
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section__title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    border-bottom: 1px black solid;
+    margin: 1rem 0;
+}
+
 
 /*==============================================================================
 Header
@@ -63,6 +75,10 @@ Header
     flex-direction: column;
 }
 
+.header__personal-info {
+    display: none;
+}
+
 .header__full-name {
     align-self: center;
     font-size: 3.5rem;
@@ -70,9 +86,8 @@ Header
     color: var(--dark-grey);
 }
 
-.header__personal-info {
-    align-self: center;
-    display: none;
+#particles-js {
+    z-index: -1;
 }
 
 #main {
@@ -80,34 +95,29 @@ Header
 }
 
 
-#resume {
-    background-color: azure;
-    opacity: 0;
-
-    animation: 1s fadeInFromBottom;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-
-}
 #profile {
-    display: none;
-    opacity: 0;
-
-    animation: 1s fadeInFromBottom;
-    animation-fill-mode: forwards;
-
-}
-
-section {
+    align-self: flex-start;
     display: flex;
     flex-direction: column;
 }
 
-.section__title {
-    font-size: 2.5rem;
-    border-bottom: 1px black solid;
-    margin: 1rem 0;
+.profile__photo {
+    align-self: center;
 }
+
+.profile__photo img {
+    border-radius: 50%;
+    max-width: 15rem;
+}
+
+.profile_intro {
+    align-self: center;
+    font-style: italic;
+    text-indent: 2rem;
+    /* background-color: aliceblue; */
+}
+
+
 
 
 .experience {
@@ -124,7 +134,7 @@ section {
 }
 .experience__company {
     flex: 0 0 100%;
-    order: 3;
+    order: 2;
     font-size: 1.8rem;
     font-weight: 500;
     color: var(--dark-grey);
@@ -132,8 +142,7 @@ section {
 }
 
 .experience__geo-date {
-    order: 2;
-    margin-left: auto;
+    order: 3;
     font-size: 1.3rem;
     font-weight: 400;
     color: var(--dark-grey);
@@ -142,6 +151,7 @@ section {
 
 .experience__job-duties {
     order: 4;
+    flex: 0 0 100%;
     margin-left: 2rem;
     line-height: 1.6;
 }
@@ -167,7 +177,7 @@ section {
 }
 
 #skills h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 #skills ul > li {
@@ -228,18 +238,27 @@ section {
         flex-direction: row;
     }
 
-    .profile__photo img {
-        border-radius: 50%;
-        max-width: 15rem;
+    #profile {
+        opacity: 0;
+        animation: 1s fadeInFromBottom;
+        animation-fill-mode: forwards;
+    
     }
 
     .profile_intro {
-        align-self: center;
-        font-style: italic;
-        text-indent: 2rem;
-        /* background-color: aliceblue; */
         padding-left: 4rem;
+
     }
+    #resume {
+        background-color: azure;
+        opacity: 0;
+
+        animation: 1s fadeInFromBottom;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+
+    }
+
     #resume {
         display: flex;
         flex-flow: row wrap;
@@ -272,6 +291,7 @@ section {
     .experience__job-title {
         order: 0;
         flex: 0;
+        font-size: 2.0rem;
         min-width: 25rem;
     }
     .experience__company{
@@ -282,6 +302,7 @@ section {
     }
     .experience__geo-date {
         order: 2;
+        margin-left: auto;
         font-size: 1.2vw;
     }
     .experience__job-duties {
