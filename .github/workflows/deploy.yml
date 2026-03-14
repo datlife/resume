@@ -2,7 +2,7 @@ name: Deploy Resume
 
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths: ['data.yaml', 'generate.py', 'template.html', 'pyproject.toml']
   workflow_dispatch:
 
