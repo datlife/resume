@@ -1,0 +1,101 @@
+profile:
+  name: Dat Nguyen
+  photo: ./assets/dat.jpg
+  tagline: >
+    Immigrated with my family from Vietnam at the age of 19, I feel privileged to live in the
+    Bay Area and witness the powerful impact of technology. That's why I decided to study 
+    Computer Science in 2013.
+    From a food server with limited English, I am grateful and humbly proud to be where I am today.
+    To me, however, everyday is "day one" and this is just the beginning for a brighter future :).
+
+header:
+  github: https://github.com/datlife
+  email: datnguyen@ucdavis.edu
+  legal_status: US Citizen
+  stackoverflow: https://stackoverflow.com/cv/dat
+
+sections:
+  - type: experience
+    title: EXPERIENCE
+    items:
+      - title: Software Engineer
+        company: Cisco / Tetration Analytics
+        dates: June 2019 - Current
+        location: Palo Alto, CA
+        duties:
+          - Working on core data pipelines (Ingestion team).
+      - title: Software Engineer Intern
+        company: Cisco / Tetration Analytics
+        dates: Spring 2019
+        location: Palo Alto, CA
+        duties:
+          - Built a data pipeline for threat hunting analysis through DataFrame and SparkSQL.
+          - Saved nearly 50% in storage cost for ML team by leveraging Parquet Data Format.
+      - title: Research Scholar
+        company: UC Berkeley
+        dates: Summer 2018
+        location: Berkeley, CA
+        duties:
+          - Conducted research on deep learning for communication system, advised by Prof. Anant Sahai.
+          - Implemented successfully a bi-directional LSTM radio receiver, running 40x faster than traditional Viterbi algorithm for correcting Convolution Code.
+      - title: Research Scholar
+        company: Carnegie Mellon University
+        dates: Summer 2017
+        location: Pittsburgh, PA
+        duties:
+          - Conducted research and implemented YOLOv2, an ML model, for Automated Road Quality Monitoring System.
+          - Published a journal paper in "Robotic Institute Summer Scholars Journal 2017".
+      - title: Research Scholar
+        company: North Carolina A&T University
+        dates: Summer 2016
+        location: Greensboro, NC
+        duties:
+          - Implemented Thermography Signal Reconstruction Algorithm to transform 2D to 3D images.
+          - A part of NASA research to nondestructively estimate defects inside critical parts of rockets.
+
+  - type: skills
+    title: TECHNICAL SKILLS
+    categories:
+      - name: Languages
+        proficiency: Proficient in
+        items: [Python, Java, Scala, Javascript]
+        worked_in: [Typescript, C++, C, Go]
+      - name: Libraries/Frameworks
+        items:
+          - Data Platform: [Spark, Hadoop, Kafka, Druid]
+          - Applied ML: [TensorFlow, Keras]
+          - Web: [React, Flask, PostgreSQL]
+      - name: Tooling
+        items: "Git, K8s, Docker, Ansible."
+
+  - type: education
+    title: EDUCATION
+    items:
+      - name: University of California, Davis
+        degree: B.S. Computer Science
+        year: Class of 2019
+      - name: De Anza College
+        degree: A.S. Computer Science
+        year: Class of 2017
+
+  # - type: projects
+  #   title: PROJECTS
+  #   items:
+  #     - title: Freedege.org
+  #       summary: Volunteer project for a non-profit organization
+  #       date: Fall 2018
+  #       highlights:
+  #         - Deployed a fridges network to allow people sharing leftover food with their communities.
+  #         - Built a software prototype for automating inventory monitoring process (Kafka / Grafana / TensorFlow).
+      # - title: Memelify
+      #   summary: Class Project
+      #   date: Fall 2018
+      #   highlights:
+      #     - Implemented a RESTful API service and deployed to Heroku.
+      #     - Applied Computer Vision (deep learning) to create a meme classification task.
+      # - title: Jetson Car
+      #   summary: Side-project
+      #   date: Fall 2017
+      #   highlights:
+      #     - Converted a RC car to race autonomously in an in-house track through Deep Learning.
+      #     - Gained significant understandings in sensor fusion, hardware calibration, path planning and deep learning.

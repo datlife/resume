@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ profile.name }} Resume</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117497530-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-117497530-1');
+  </script>
+</head>
+<body>
+  <div id="particles-js">
+  </div>
+  <div id="main">
+    <div id="profile">
+      <div class="profile__photo">
+        <img src="{{ profile.photo }}" alt="{{ profile.name }} Photo">
+      </div>
+      <div class="profile_intro">
+          "{{ profile.tagline }}"
+      </div>
+    </div>
+    <div id="resume">
+      <div class="header">
+        <div class="header__full-name">{{ profile.name|upper|replace(' ', ' ') }}</div>
+        <div class="header__personal-info">
+          <div class="social github-link"><a target="_blank" href="{{ header.github }}">{{ header.github|replace('https://', '') }}</a></div>
+          <div class="social email-address">{{ header.email }}</div>
+          <div class="legal-status">{{ header.legal_status }}</div>
+          <div class="social stackoverflow"><a target="_blank" href="{{ header.stackoverflow }}">{{ header.stackoverflow|replace('https://', '') }}</a> </div>
+        </div>
+      </div>
+      {% for section in sections %}
+      <div id="{{ section.type }}" class="section">
+        <div class="section__title">{{ section.title }}</div>
+        <div class="section__details">
+          {% if section.type == 'experience' %}
+            {% for item in section['items'] %}
+          <div class="experience">
+              <div class="experience__job-title">{{ item.title }}</div>
+              <div class="experience__company">{{ item.company }}</div>
+              <div class="experience__geo-date">{{ item.dates }} | {{ item.location }}</div>
+              <ul class="experience__job-duties">
+                {% for duty in item.duties %}
+                <li>{{ duty }}</li>
+                {% endfor %}
+              </ul>
+          </div>
+            {% endfor %}
+          {% elif section.type == 'skills' %}
+          <ul class="skills">
+            {% for category in section['categories'] %}
+            <li>
+              <h3>{{ category.name }}</h3>
+              <ul>
+                {% if category.proficiency %}
+                <li><span>{{ category.proficiency }} in</span>: {{ category['items']|join(', ') }}</li>
+                {% if category.worked_in %}
+                <li><span>Worked in</span>: {{ category['worked_in']|join(', ') }}</li>
+                {% endif %}
+                {% else %}
+                  {% if category['items'] is string %}
+                <li>{{ category['items'] }}</li>
+                  {% else %}
+                    {% for item in category['items'] %}
+                      {% if item is mapping %}
+                        {% for key, values in item.items() %}
+                <li><span>{{ key }}</span>: {{ values|join(', ') }}</li>
+                        {% endfor %}
+                      {% else %}
+                <li>{{ item }}</li>
+                      {% endif %}
+                    {% endfor %}
+                  {% endif %}
+                {% endif %}
+              </ul>
+            </li>
+            {% endfor %}
+          </ul>
+          {% elif section.type == 'education' %}
+            {% for item in section['items'] %}
+          <div class="school">
+            <div class="school__name">{{ item.name }}</div>
+            <div class="degree">{{ item.degree }}</div>
+            <div class="graduation-date">{{ item.year }}</div>
+          </div>
+            {% endfor %}
+          {% elif section.type == 'projects' %}
+            {% for item in section['items'] %}
+          <div class="project">
+            <div class="project__title">{{ item.title }}</div>
+            <div class="project__summary">{{ item.summary }}</div>
+            <div class="project__date">{{ item.date }}</div>
+            <ul class="project__highlights">
+              {% for highlight in item.highlights %}
+              <li>{{ highlight }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <script type="text/javascript" src="./assets/particles.min.js"></script>
+  <script type="text/javascript" src="./assets/script.js"></script>
+</body>
+</html>
