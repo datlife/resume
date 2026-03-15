@@ -1,5 +1,5 @@
 profile:
-  name: Dat Nguyen
+  name: Andy Nguyen
   photo: ./assets/dat.jpg
   tagline: >
     Immigrated with my family from Vietnam at the age of 19, I feel privileged to live in the
@@ -12,15 +12,21 @@ header:
   github: https://github.com/datlife
   email: datnguyen@ucdavis.edu
   legal_status: US Citizen
-  stackoverflow: https://stackoverflow.com/cv/dat
+  stackoverflow: https://stackoverflow.com/users/3831845/andy-nguyen
 
 sections:
   - type: experience
     title: EXPERIENCE
     items:
+      - title: Machine Learning Engineer
+        company: Zscaler
+        dates: Sept 2021 - Present
+        location: San Jose, CA
+        duties:
+          - TBD.
       - title: Software Engineer
         company: Cisco / Tetration Analytics
-        dates: June 2019 - Current
+        dates: June 2019 - Sept 2021
         location: Palo Alto, CA
         duties:
           - Working on core data pipelines (Ingestion team).
